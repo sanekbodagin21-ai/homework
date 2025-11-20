@@ -1,0 +1,46 @@
+.first-text{
+    font-family: "Open Sans", "Arial", sans-serif ;
+    font-size: 20px;
+    line-height: 30px;
+}
+.second-text{
+    text-decoration: line-through;
+}
+.third-text {
+    text-transform: uppercase;
+    text-align: center;
+}
+.fourth-text {
+    word-spacing: 30px;
+    text-decoration: overline wavy;
+    text-shadow: #7559CB 1px 0 1px;
+    
+}
+.fifth-text{
+    text-decoration: underline double;
+    letter-spacing: 5px;
+}
+.sixth-text{
+    font-family: "Elms Sans", "Arial", sans-serif;
+    font-size: 20px;
+    color: #C69FD5;
+    background-color: #FDFDC9;
+    letter-spacing: 2px;
+    text-decoration: overline double #7559CB;
+}
+.seventh-text{
+color: #f0f04c;
+word-spacing: 5px;
+text-transform: capitalize;
+text-align: right;
+text-shadow: 1px 1px 2px #9259a0;
+text-decoration: underline dotted #948f62
+}
+.eighth-text {
+    font-family: "Press Start 2P", "Courier New", sans-serif;
+    font-size: 13px;
+    word-spacing: 4px;
+    text-shadow: 2px 0 5px #773dff;
+    color: #f3ea9d;
+    text-decoration: underline wavy #7559CB ;
+}
