@@ -1,0 +1,21 @@
+* {font-family: Arial, sans-serif;}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 250px;
+}
+td, th, caption{
+    border: 2px solid #000;
+    text-align: center
+}
+
+
+caption{
+    font-weight: 700;
+    font-size: 25px;
+    border-bottom: none;
+}
+.to_red {
+    color: red;
+}
