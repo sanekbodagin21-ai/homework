@@ -1,0 +1,18 @@
+body {
+    font-family: sans-serif ;
+}
+form{
+    max-width: 300px;
+}
+label {
+    display: block;
+
+}
+textarea{
+    resize: vertical;
+    max-height: 200px;
+}
+button {
+    margin-top: 5px;
+    cursor: pointer;
+}
