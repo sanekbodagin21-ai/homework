@@ -1,0 +1,47 @@
+.footer {
+    background: linear-gradient(90.00deg, rgba(73, 169, 255, 0.2), rgba(252, 124, 217, 0.2) 100%);
+    padding: 60px 0 40px;
+    text-align: center;
+    margin-top: auto;
+}
+
+.footer-top {
+    border-bottom: 1px solid #d3cbd9;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-logo {
+    display: inline-block;
+    margin-bottom: 40px;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+.menu a {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 130%;
+    color: #535755;
+    transition: color .2s;
+}
+
+.menu a:hover {
+    color: #3596ED;
+}
+
+.copyright {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 4%;
+    color: #858E8A;
+}
