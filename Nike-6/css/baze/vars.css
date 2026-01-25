@@ -1,0 +1,35 @@
+:root {
+    /* font-family */
+    --font-family: "Montserrat", sans-serif;
+
+    /* colors */
+    --main-color: #fff;
+    --accent-color: #ffea00;
+    --bg-color: #2a2a29;
+    --secondary-color: #c9c69b;
+    --disabled-color: #5d5d56;
+    --disabled-glow-color: #5d5d564d;
+    --shadow-color: #181817;
+    --accent-glow-color: #ffea004d;
+    --main-glow-color: #ffffff4d;
+
+    /* shadows */
+    --shadow-glow: 0 0 6px 2px var(--main-glow-color);
+    --shadow-accent-glow: 0 0 6px 2px var(--accent-glow-color);
+    --shadow-disabled-glow: 0 0 6px 2px var(--disabled-glow-color);
+
+
+    /* container */
+    --container-width: 1240px;
+    --container-padding: 15px;
+
+    /* transition */
+    --transitions-time: .2s;
+
+    /* layers */
+    --layer-0: 0;
+    --layer-1: 1;
+    --layer-2: 2;
+    --layer-3: 3;
+    --layer-negative: -1;
+}
