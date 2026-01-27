@@ -1,0 +1,17 @@
+<svg viewBox="0 0 44.1729 32.8819" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="44.172852" height="32.881897" fill="none" customFrame="#000000">
+	<defs>
+		<g id="pixso_custom_effect_1">
+			<effect visibility="visible" effectType="gaussianBlur" stdDeviation="8" />
+		</g>
+		<filter id="filter_1" width="44.172852" height="32.881897" x="0.000000" y="0.000000" filterUnits="userSpaceOnUse" customEffect="url(#pixso_custom_effect_1)" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix" />
+			<feBlend result="shape" in="SourceGraphic" in2="BackgroundImageFix" mode="normal" />
+			<feGaussianBlur stdDeviation="2.66666675" result="effect_layerBlur_1" />
+		</filter>
+	</defs>
+	<rect id="lucide/check-check" width="32.000000" height="32.000000" x="6.086426" y="0.753052" fill="rgb(255,255,255)" fill-opacity="0" />
+	<g filter="url(#filter_1)">
+		<path id="Vector" d="M30.0868 8.75305L15.4201 23.4197L8.75342 16.7531M35.4201 14.0864L25.4201 24.0864L23.4201 22.0864" fill-rule="evenodd" stroke="rgb(255,233.75,0)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.500000" />
+	</g>
+	<path id="Vector" d="M30.0868 8.75305L15.4201 23.4197L8.75342 16.7531M35.4201 14.0864L25.4201 24.0864L23.4201 22.0864" fill-rule="evenodd" stroke="rgb(255,233.75,0)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.500000" />
+</svg>
