@@ -1,0 +1,32 @@
+.page {
+    font-family: var(--first-family);
+    font-size: 400;
+    color: var(--maim-color);
+    height: 100vh;
+}
+
+.page__body {
+    min-width: 375px;
+    background-color: var(--secondary-color);
+    transition: padding-top var(--transitions-time);
+}
+
+.page__body--no-scroll {
+    overflow-y: hidden;
+}
+
+.container {
+    width: min(var(--container-width), 100% - var(--container-padding) * 2);
+}
+
+.logo {
+    font-family: var(--third-family);
+    font-weight: 700;
+    color: var(--main-color);
+}
+
+.text__small {
+    font-family: var(--font-family);
+    font-weight: 400;
+    color: var(--main-transparent-color);
+}

@@ -1,0 +1,23 @@
+:root {
+    /* font-family */
+    --first-family: "Satoshi", sans-serif;
+    --second-family: "Fontspring-demo", sans-serif;
+    --third-family: "Integral-CF", sans-serif;
+
+    /* color */
+    --main-color: #000;
+    --secondary-color: #fff;
+    --accent-color: #F0F0F0; 
+    --accent-color-shadow: #a8a8a8;
+    --secondary-transparent-color: #0000004d;
+    --main-transparent-color: #00000099;
+
+    /* transition */
+    --transitions-time: 0.2s;
+
+    /* z-index */
+    --layer-0: 0;
+    --layer-1: 1;
+    --layer-2: 2;
+    --layer-3: 3;
+}

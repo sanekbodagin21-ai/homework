@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/promo-banner.js" type="module"></script>
+    <script defer src="./js/index.js" type="module"></script>
+    <title>Graduate work</title>
+</head>
+
+<body class="page__body">
+    <aside class="promo-banner" aria-label="Уведомление о скидках" title="Уведомление о скидках">
+        <p class="promo-banner__text">Зарегестрируйтесь и получите скидку 20% на первую покупку.</p>
+        <a class="promo-banner__link" href="#">Зарегестрироваться сейчас</a>
+        <button class="promo-banner__close">
+            <svg width="14" height="14">
+                <use class="promo-banner__icon" href="./icons/cross-icon.svg#cross"></use>
+            </svg>
+        </button>
+    </aside>
+    <header class="header">
+        <div class="container header__container">
+            <button class="header__burger burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="header__menu">
+                <svg class="header__burger-icon" width="19" height="15">
+                    <use href="./icons/header-icon.svg#burger"></use>
+                </svg>
+                <svg class="header__cross-menu-icon" width="19" height="15">
+                    <use href="./icons/header-icon.svg#cross-menu"></use>
+                </svg>
+            </button>
+            <a href="#" class="logo header__logo">shop.co</a>
+            <nav id="header__menu" class="header__menu" aria-label="Главное меню">
+                <ul class="header__menu-list">
+                    <li class="header__menu-item">
+                        <a class="header__menu-link" href="#">Магазин
+                            <svg class="header__menu-link-icon" width="12" height="7">
+                                <use href="./icons/header-icon.svg#shop"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="header__menu-item"><a class="header__menu-link" href="#">Скидки</a></li>
+                    <li class="header__menu-item"><a class="header__menu-link" href="#">Новые поступления</a></li>
+                    <li class="header__menu-item"><a class="header__menu-link" href="#">Бренды</a></li>
+                </ul>
+            </nav>
+            <div class="header__controls">
+                <form class="header__search-form" action="search_form">
+                    <button class="header__search-button">
+                        <svg class="header__search-button-icon" width="21" height="21">
+                            <use href="./icons/header-icon.svg#search"></use>
+                        </svg>
+                    </button>
+                    <input class="header__search-input" name="search" placeholder="Искать товары.." type="search">
+                </form>
+                <div class="header__actions">
+                    <button>
+                        <svg width="23" height="21">
+                            <use class="actions__button-icon" href="./icons/header-icon.svg#cart"></use>
+                        </svg>
+                    </button>
+                    <button>
+                        <svg width="21" height="21">
+                            <use class="actions__button-icon" href="./icons/header-icon.svg#user"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="hero">
+        <div class="hero__container container">
+            <div class="hero__info">
+                <h1 class="hero__title">НАЙДИ ОДЕЖДУ <br> КОТОРАЯ ВЫРАЗИТ <br> ТВОЙ СТИЛЬ</h1>
+                <p class="hero__text text__small">Просмотрите наш набор тщательно сделанной одежды, созданный чтобы
+                    подчеркнуть ваш индивидуальный стиль.</p>
+                <button class="hero__button">Купить сейчас</button>
+                <ul class="hero__statistics">
+                    <li class="statistics__item">
+                        <h2 class="statistics__item-title">200+</h2>
+                        <p class="statistics__item-text text__small">Всемирных брендов</p>
+                    </li>
+                    <li class="statistics__item">
+                        <h2 class="statistics__item-title">2,000+</h2>
+                        <p class="statistics__item-text text__small">Качественных товаров</p>
+                    </li>
+                    <li class="statistics__item">
+                        <h2 class="statistics__item-title">30,000+</h2>
+                        <p class="statistics__item-text text__small">Счастливых клиентов</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="hero__img">
+                <picture>
+                    <source srcset="./images/people-img.webp" type="image/webp">
+                    <img src="./images/people-img.png" alt="Мужчина и женщина в одежде от магазина 'shop.co'">
+                </picture>
+            </div>
+        </div>
+        
+    </section>
+</body>
+
+</html>
