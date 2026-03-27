@@ -24,13 +24,14 @@
 }
 
 @font-face {
-    font-family: Fontspring-demo;
-    src: local("Fontspring-demo Regular"), local("Fontspring-demo-Regular"),
-        url("../../fonts/fontspring-demo-28.woff2") format("woff2");
-    font-weight: 900;
+    font-family: GolosText;
+    src: local("GolosText SemiBold"), local("GolosText-SemiBold"),
+        url("../../fonts/GolosText-SemiBold.woff2") format("woff2");
+    font-weight: 700;
     font-style: normal;
     font-display: swap;
 }
+
 @font-face {
     font-family: Integral-CF;
     src: local("Integral-CF Bold"), local("Integral-CF-Bold"),

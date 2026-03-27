@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js" defer></script>
     <script src="./js/promo-banner.js" type="module"></script>
     <script defer src="./js/index.js" type="module"></script>
     <title>Graduate work</title>
@@ -12,94 +14,1003 @@
 
 <body class="page__body">
     <aside class="promo-banner" aria-label="Уведомление о скидках" title="Уведомление о скидках">
-        <p class="promo-banner__text">Зарегестрируйтесь и получите скидку 20% на первую покупку.</p>
-        <a class="promo-banner__link" href="#">Зарегестрироваться сейчас</a>
-        <button class="promo-banner__close">
-            <svg width="14" height="14">
-                <use class="promo-banner__icon" href="./icons/cross-icon.svg#cross"></use>
+        <p class="promo-banner__text">Зарегистрируйтесь и получите скидку 20% на первую покупку. </p>
+        <a class="promo-banner__link" href="#">Зарегистрироваться сейчас</a>
+        <button class="promo-banner__close" aria-label="Закрыть уведомление о скидках">
+            <svg class="promo-banner__icon" width="14" height="14" aria-hidden="true">
+                <use href="./icons/cross-icon.svg#cross"></use>
             </svg>
         </button>
     </aside>
     <header class="header">
         <div class="container header__container">
-            <button class="header__burger burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="header__menu">
-                <svg class="header__burger-icon" width="19" height="15">
-                    <use href="./icons/header-icon.svg#burger"></use>
-                </svg>
-                <svg class="header__cross-menu-icon" width="19" height="15">
-                    <use href="./icons/header-icon.svg#cross-menu"></use>
-                </svg>
-            </button>
-            <a href="#" class="logo header__logo">shop.co</a>
+            <div class="header__inner" role="navigation">
+                <button class="header__burger burger" aria-label="Открыть меню" aria-expanded="false"
+                    aria-controls="header__menu">
+                    <svg class="header__burger-icon" width="19" height="15">
+                        <use href="./icons/header-icon.svg#burger"></use>
+                    </svg>
+                    <svg class="header__cross-menu-icon" width="19" height="15">
+                        <use href="./icons/header-icon.svg#cross-menu"></use>
+                    </svg>
+                </button>
+                <a href="#" class="logo header__logo" aria-label="Логотип компании">shop.co</a>
+            </div>
             <nav id="header__menu" class="header__menu" aria-label="Главное меню">
                 <ul class="header__menu-list">
                     <li class="header__menu-item">
-                        <a class="header__menu-link" href="#">Магазин
-                            <svg class="header__menu-link-icon" width="12" height="7">
+                        <a class="header__menu-link" aria-haspopup="true" aria-expanded="false" href="#">Магазин
+                            <svg class="header__menu-link-icon" aria-hidden="true" width="12" height="7">
                                 <use href="./icons/header-icon.svg#shop"></use>
                             </svg>
                         </a>
                     </li>
                     <li class="header__menu-item"><a class="header__menu-link" href="#">Скидки</a></li>
-                    <li class="header__menu-item"><a class="header__menu-link" href="#">Новые поступления</a></li>
-                    <li class="header__menu-item"><a class="header__menu-link" href="#">Бренды</a></li>
+                    <li class="header__menu-item"><a class="header__menu-link" href="#receipts">Новые поступления</a>
+                    </li>
+                    <li class="header__menu-item"><a class="header__menu-link" href="#brands">Бренды</a></li>
                 </ul>
             </nav>
             <div class="header__controls">
-                <form class="header__search-form" action="search_form">
-                    <button class="header__search-button">
-                        <svg class="header__search-button-icon" width="21" height="21">
+                <form class="header__search-form" role="search" aria-label="Поиск по сайту">
+                    <label class="header__search-label" for="header__search-input"></label>
+                    <button class="header__search-button" aria-label="Кнопка поиска">
+                        <svg class="header__search-button-icon" aria-hidden="true" width="21" height="21">
                             <use href="./icons/header-icon.svg#search"></use>
                         </svg>
                     </button>
-                    <input class="header__search-input" name="search" placeholder="Искать товары.." type="search">
+                    <input id="header__search-input" class="header__search-input" name="search"
+                        placeholder="Искать товары.." type="search">
                 </form>
                 <div class="header__actions">
-                    <button>
-                        <svg width="23" height="21">
-                            <use class="actions__button-icon" href="./icons/header-icon.svg#cart"></use>
+                    <button class="actions__button-icon" aria-label="Корзина товаров">
+                        <svg aria-hidden="true" width="23" height="21">
+                            <use href="./icons/header-icon.svg#cart"></use>
                         </svg>
                     </button>
-                    <button>
-                        <svg width="21" height="21">
-                            <use class="actions__button-icon" href="./icons/header-icon.svg#user"></use>
+                    <button class="actions__button-icon" aria-label="Аккаунт">
+                        <svg aria-hidden="true" width="21" height="21">
+                            <use href="./icons/header-icon.svg#user"></use>
                         </svg>
                     </button>
                 </div>
             </div>
         </div>
     </header>
-    <section class="hero">
-        <div class="hero__container container">
-            <div class="hero__info">
-                <h1 class="hero__title">НАЙДИ ОДЕЖДУ <br> КОТОРАЯ ВЫРАЗИТ <br> ТВОЙ СТИЛЬ</h1>
-                <p class="hero__text text__small">Просмотрите наш набор тщательно сделанной одежды, созданный чтобы
-                    подчеркнуть ваш индивидуальный стиль.</p>
-                <button class="hero__button">Купить сейчас</button>
-                <ul class="hero__statistics">
-                    <li class="statistics__item">
-                        <h2 class="statistics__item-title">200+</h2>
-                        <p class="statistics__item-text text__small">Всемирных брендов</p>
+    <main>
+        <section class="hero">
+            <div class="hero__container container hero__container-position">
+                <div class="hero__info">
+                    <h1 class="hero__title">НАЙДИ ОДЕЖДУ <br> КОТОРАЯ ВЫРАЗИТ <br> ТВОЙ СТИЛЬ</h1>
+                    <p class="hero__text text__s">Просмотрите наш набор тщательно сделанной одежды, созданный чтобы
+                        подчеркнуть ваш индивидуальный стиль.</p>
+                    <button class="hero__button" aria-label="Перейти к покупкам">Купить сейчас</button>
+                    <ul class="hero__statistics" aria-label="Статистика компании">
+                        <li class="statistics__item">
+                            <h2 class="statistics__item-title">200+</h2>
+                            <p class="statistics__item-text text__s">Всемирных брендов</p>
+                        </li>
+                        <span class="statistics__item-separator"></span>
+                        <li class="statistics__item">
+                            <h2 class="statistics__item-title">2,000+</h2>
+                            <p class="statistics__item-text text__s">Качественных товаров</p>
+                        </li>
+                        <span class="statistics__item-separator"></span>
+                        <li class="statistics__item">
+                            <h2 class="statistics__item-title">30,000+</h2>
+                            <p class="statistics__item-text text__s">Счастливых клиентов</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="hero__star-container" aria-hidden="true" role="presentation">
+                    <div>
+                        <svg class="hero__star-1" aria-hidden="true">
+                            <use href="./icons/star-icon.svg"></use>
+                        </svg>
+                    </div>
+                    <div>
+                        <svg class="hero__star-2" aria-hidden="true">
+                            <use href="./icons/star-icon.svg"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="shops" id="brands">
+            <div class="shops__container container">
+                <ul class="shops__list" role="list" aria-label="Бренды, представленные в магазине">
+                    <li class="shops__item">
+                        <svg class="shops__item-versace" aria-hidden="true" focusable="false">
+                            <use href="./icons/shops.svg#versace"></use>
+                        </svg>
                     </li>
-                    <li class="statistics__item">
-                        <h2 class="statistics__item-title">2,000+</h2>
-                        <p class="statistics__item-text text__small">Качественных товаров</p>
+                    <li class="shops__item">
+                        <svg class="shops__item-zara" aria-hidden="true" focusable="false">
+                            <use href="./icons/shops.svg#zara"></use>
+                        </svg>
                     </li>
-                    <li class="statistics__item">
-                        <h2 class="statistics__item-title">30,000+</h2>
-                        <p class="statistics__item-text text__small">Счастливых клиентов</p>
+                    <li class="shops__item">
+                        <svg class="shops__item-gucci" aria-hidden="true" focusable="false">
+                            <use href="./icons/shops.svg#gucci"></use>
+                        </svg>
+                    </li>
+                    <li class="shops__item">
+                        <svg class="shops__item-prada" aria-hidden="true" focusable="false">
+                            <use href="./icons/shops.svg#prada"></use>
+                        </svg>
+                    </li>
+                    <li class="shops__item">
+                        <svg class="shops__item-calvin" aria-hidden="true" focusable="false">
+                            <use href="./icons/shops.svg#calvin-klein"></use>
+                        </svg>
                     </li>
                 </ul>
             </div>
-            <div class="hero__img">
-                <picture>
-                    <source srcset="./images/people-img.webp" type="image/webp">
-                    <img src="./images/people-img.png" alt="Мужчина и женщина в одежде от магазина 'shop.co'">
-                </picture>
+        </section>
+        <section class="receipts" id="receipts">
+            <div class="receipts__container container">
+                <h2 class="receipts__title title-large">НОВЫЕ ПОСТУПЛЕНИЯ</h2>
+                <div class="receipts__products" role="list">
+                    <article class="receipts__product">
+                        <a href="#" class="receipts__product-link">
+                            <div class="receipts__product-card">
+                                <picture>
+                                    <source srcset="./images/receipts-img/receipts-1.webp" type="image.webp">
+                                    <img class="receipts__product-card-image" src="./images/receipts-img/receipts-1.png"
+                                        alt="Черная базовая футболка с надписью 'New rules'">
+                                </picture>
+                            </div>
+                            <div class="receipts__product-info">
+                                <h2 class="product__info-title text__s-bold">Футболка с лентой</h2>
+                                <div class="product__info-rating" aria-label="Рейтинг товара 4.5 из 5 звезд">
+                                    <div class="product__rating">
+                                        <div class="product__rating-star" aria-hidden="true">
+                                            <svg class="rating__star-icon">
+                                                <use href="./icons/stars.svg#fullstar"></use>
+                                            </svg>
+                                            <svg class="rating__star-icon">
+                                                <use href="./icons/stars.svg#fullstar"></use>
+                                            </svg>
+                                            <svg class="rating__star-icon">
+                                                <use href="./icons/stars.svg#fullstar"></use>
+                                            </svg>
+                                            <svg class="rating__star-icon">
+                                                <use href="./icons/stars.svg#fullstar"></use>
+                                            </svg>
+                                            <svg class="rating__star-icon">
+                                                <use href="./icons/stars.svg#halfstar"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="product__rating-text text__xs" aria-hidden="true">4.5/<span
+                                                class="product__rating-text--accent">5</span></div>
+                                    </div>
+                                </div>
+                                <div class="product__info-cost">
+                                    <p class="product__info-price" aria-label="Цена товара">₽5000</p>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="receipts__product">
+                        <a href="#" class="receipts__product-link">
+                            <div class="receipts__product-card">
+                                <picture>
+                                    <source srcset="./images/receipts-img/receipts-2.webp" type="image.webp">
+                                    <img src="./images/receipts-img/receipts-2.png" alt="Базовые узкие синие джинсы">
+                                </picture>
+                            </div>
+                            <div class="receipts__product-info">
+                                <h2 class="product__info-title text__s-bold">Узкие джинсы</h2>
+                                <div class="product__info-rating" aria-label="Рейтинг товара 3.5 из 5 звезд">
+                                    <div class="product__rating">
+                                        <div class="product__rating-star" aria-hidden="true">
+                                            <svg class="rating__star-icon">
+                                                <use href="./icons/stars.svg#fullstar"></use>
+                                            </svg>
+                                            <svg class="rating__star-icon">
+                                                <use href="./icons/stars.svg#fullstar"></use>
+                                            </svg>
+                                            <svg class="rating__star-icon">
+                                                <use href="./icons/stars.svg#fullstar"></use>
+                                            </svg>
+                                            <svg class="rating__star-icon">
+                                                <use href="./icons/stars.svg#fullstar"></use>
+                                            </svg>
+                                            <svg class="rating__star-icon">
+                                                <use href="./icons/stars.svg#halfstar"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="product__rating-text text__xs" aria-hidden="true">3.5/<span
+                                                class="product__rating-text--accent">5</span></div>
+                                    </div>
+                                </div>
+                                <div class="product__info-cost">
+                                    <p class="product__info-price" aria-label="Цена товара">₽5000</p>
+                                    <p class="product__info-last-price" aria-label="Старая цена товара">₽6000</p>
+                                    <div class="product__info-discount" aria-label="Скидка на товар">-20%</div>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="receipts__product">
+                        <a href="#" class="receipts__product-link">
+                            <div class="receipts__product-card">
+                                <picture>
+                                    <source srcset="./images/receipts-img/receipts-3.webp" type="image.webp">
+                                    <img src="./images/receipts-img/receipts-3.png" alt="Рубашка в красно-синюю клетку"
+                                        width="295" height="298">
+                                </picture>
+                            </div>
+                            <div class="receipts__product-info">
+                                <h2 class="product__info-title text__s-bold">Клетчатая рубашка</h2>
+                                <div class="product__info-rating" aria-label="Рейтинг товара 4.5 из 5 звезд">
+                                    <div class="product__rating">
+                                        <div class="product__rating-star" aria-hidden="true">
+                                            <svg class="rating__star-icon">
+                                                <use href="./icons/stars.svg#fullstar"></use>
+                                            </svg>
+                                            <svg class="rating__star-icon">
+                                                <use href="./icons/stars.svg#fullstar"></use>
+                                            </svg>
+                                            <svg class="rating__star-icon">
+                                                <use href="./icons/stars.svg#fullstar"></use>
+                                            </svg>
+                                            <svg class="rating__star-icon">
+                                                <use href="./icons/stars.svg#fullstar"></use>
+                                            </svg>
+                                            <svg class="rating__star-icon">
+                                                <use href="./icons/stars.svg#halfstar"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="product__rating-text text__xs" aria-hidden="true">4.5/<span
+                                                class="product__rating-text--accent">5</span></div>
+                                    </div>
+                                </div>
+                                <div class="product__info-cost">
+                                    <p class="product__info-price" aria-label="Цена товара">₽7000</p>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="receipts__product">
+                        <a href="#" class="receipts__product-link">
+                            <div class="receipts__product-card">
+                                <picture>
+                                    <source srcset="./images/receipts-img/receipts-4.webp" type="image.webp">
+                                    <img src="./images/receipts-img/receipts-4.png"
+                                        alt="Оранжевая футболка с черными рукавами и черными полосами" width="295"
+                                        height="298">
+                                </picture>
+                            </div>
+                            <div class="receipts__product-info">
+                                <h2 class="product__info-title text__s-bold">Футболка с полосами</h2>
+                                <div class="product__info-rating" aria-label="Рейтинг товара 4.5 из 5 звезд">
+                                    <div class="product__rating">
+                                        <div class="product__rating-star" aria-hidden="true">
+                                            <svg class="rating__star-icon">
+                                                <use href="./icons/stars.svg#fullstar"></use>
+                                            </svg>
+                                            <svg class="rating__star-icon">
+                                                <use href="./icons/stars.svg#fullstar"></use>
+                                            </svg>
+                                            <svg class="rating__star-icon">
+                                                <use href="./icons/stars.svg#fullstar"></use>
+                                            </svg>
+                                            <svg class="rating__star-icon">
+                                                <use href="./icons/stars.svg#fullstar"></use>
+                                            </svg>
+                                            <svg class="rating__star-icon">
+                                                <use href="./icons/stars.svg#halfstar"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="product__rating-text text__xs" aria-hidden="true">4.5/<span
+                                                class="product__rating-text--accent">5</span></div>
+                                    </div>
+                                </div>
+                                <div class="product__info-cost">
+                                    <p class="product__info-price" aria-label="Цена товара">₽5000</p>
+                                    <p class="product__info-last-price" aria-label="Старая цена товара">₽8000</p>
+                                    <div class="product__info-discount" aria-label="Скидка на товар">-30%</div>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+                <div class="receipts__button-container">
+                    <button class="receipts__button">Посмотреть ещё</button>
+                </div>
+                <div class="scrollbar-track" aria-hidden="true"></div>
+                <h2 class="receipts__title title-large">ЛИДЕРЫ ПРОДАЖ</h2>
+                <div class="receipts__products" role="list">
+                    <article class="receipts__product">
+                        <a href="#" class="receipts__product-link">
+                            <div class="receipts__product-card">
+                                <picture>
+                                    <source srcset="./images/receipts-img/receipts-5.webp" type="image.webp">
+                                    <img src="./images/receipts-img/receipts-5.png"
+                                        alt="Зелёная рубашка с длинными рукавами в чёрную полоску">
+                                </picture>
+                            </div>
+                            <div class="receipts__product-info">
+                                <h2 class="product__info-title text__s-bold">Рубашка в полоску</h2>
+                                <div class="product__info-rating" aria-label="Рейтинг товара 5 из 5 звезд">
+                                    <div class="product__rating">
+                                        <div class="product__rating-star" aria-hidden="true">
+                                            <svg class="rating__star-icon">
+                                                <use href="./icons/stars.svg#fullstar"></use>
+                                            </svg>
+                                            <svg class="rating__star-icon">
+                                                <use href="./icons/stars.svg#fullstar"></use>
+                                            </svg>
+                                            <svg class="rating__star-icon">
+                                                <use href="./icons/stars.svg#fullstar"></use>
+                                            </svg>
+                                            <svg class="rating__star-icon">
+                                                <use href="./icons/stars.svg#fullstar"></use>
+                                            </svg>
+                                            <svg class="rating__star-icon">
+                                                <use href="./icons/stars.svg#fullstar"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="product__rating-text text__xs" aria-hidden="true">5.0/<span
+                                                class="product__rating-text--accent">5</span></div>
+                                    </div>
+                                </div>
+                                <div class="product__info-cost">
+                                    <p class="product__info-price" aria-label="Цена товара">₽5000</p>
+                                    <p class="product__info-last-price" aria-label="Старая цена товара">₽6000</p>
+                                    <div class="product__info-discount" aria-label="Скидка на товар">-20%</div>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="receipts__product">
+                        <a href="#" class="receipts__product-link">
+                            <div class="receipts__product-card">
+                                <picture>
+                                    <source srcset="./images/receipts-img/receipts-6.webp" type="image.webp">
+                                    <img src="./images/receipts-img/receipts-6.png"
+                                        alt="Оранжевая футболка с ярким принтом">
+                                </picture>
+                            </div>
+                            <div class="receipts__product-info">
+                                <h2 class="product__info-title text__s-bold">Футболка «Courage».</h2>
+                                <div class="product__info-rating" aria-label="Рейтинг товара 4 из 5 звезд">
+                                    <div class="product__rating">
+                                        <div class="product__rating-star" aria-hidden="true">
+                                            <svg class="rating__star-icon">
+                                                <use href="./icons/stars.svg#fullstar"></use>
+                                            </svg>
+                                            <svg class="rating__star-icon">
+                                                <use href="./icons/stars.svg#fullstar"></use>
+                                            </svg>
+                                            <svg class="rating__star-icon">
+                                                <use href="./icons/stars.svg#fullstar"></use>
+                                            </svg>
+                                            <svg class="rating__star-icon">
+                                                <use href="./icons/stars.svg#fullstar"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="product__rating-text text__xs" aria-hidden="true">4.0/<span
+                                                class="product__rating-text--accent">5</span></div>
+                                    </div>
+                                </div>
+                                <div class="product__info-cost">
+                                    <p class="product__info-price" aria-label="Цена товара">₽5000</p>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="receipts__product">
+                        <a href="#" class="receipts__product-link">
+                            <div class="receipts__product-card">
+                                <picture>
+                                    <source srcset="./images/receipts-img/receipts-7.webp" type="image.webp">
+                                    <img src="./images/receipts-img/receipts-7.png"
+                                        alt="Джинсовые голубые шорты-бермуды">
+                                </picture>
+                            </div>
+                            <div class="receipts__product-info">
+                                <h2 class="product__info-title text__s-bold">Свободные бермуды</h2>
+                                <div class="product__info-rating" aria-label="Рейтинг товара 3 из 5 звезд">
+                                    <div class="product__rating">
+                                        <div class="product__rating-star" aria-hidden="true">
+                                            <svg class="rating__star-icon">
+                                                <use href="./icons/stars.svg#fullstar"></use>
+                                            </svg>
+                                            <svg class="rating__star-icon">
+                                                <use href="./icons/stars.svg#fullstar"></use>
+                                            </svg>
+                                            <svg class="rating__star-icon">
+                                                <use href="./icons/stars.svg#fullstar"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="product__rating-text text__xs" aria-hidden="true">3.0/<span
+                                                class="product__rating-text--accent">5</span></div>
+                                    </div>
+                                </div>
+                                <div class="product__info-cost">
+                                    <p class="product__info-price" aria-label="Цена товара">₽4000</p>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="receipts__product">
+                        <a href="#" class="receipts__product-link">
+                            <div class="receipts__product-card">
+                                <picture>
+                                    <source srcset="./images/receipts-img/receipts-8.webp" type="image.webp">
+                                    <img src="./images/receipts-img/receipts-8.png" alt="Чёрные потёртые узкие джинсы">
+                                </picture>
+                            </div>
+                            <div class="receipts__product-info">
+                                <h2 class="product__info-title text__s-bold">Потертые узкие джинсы</h2>
+                                <div class="product__info-rating" aria-label="Рейтинг товара 4.5 из 5 звезд">
+                                    <div class="product__rating">
+                                        <div class="product__rating-star" aria-hidden="true">
+                                            <svg class="rating__star-icon">
+                                                <use href="./icons/stars.svg#fullstar"></use>
+                                            </svg>
+                                            <svg class="rating__star-icon">
+                                                <use href="./icons/stars.svg#fullstar"></use>
+                                            </svg>
+                                            <svg class="rating__star-icon">
+                                                <use href="./icons/stars.svg#fullstar"></use>
+                                            </svg>
+                                            <svg class="rating__star-icon">
+                                                <use href="./icons/stars.svg#fullstar"></use>
+                                            </svg>
+                                            <svg class="rating__star-icon">
+                                                <use href="./icons/stars.svg#halfstar"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="product__rating-text text__xs" aria-hidden="true">4.5/<span
+                                                class="product__rating-text--accent">5</span></div>
+                                    </div>
+                                </div>
+                                <div class="product__info-cost">
+                                    <p class="product__info-price" aria-label="Цена товара">₽7000</p>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+                <div class="receipts__button-container">
+                    <button class="receipts__button">Посмотреть ещё</button>
+                </div>
+            </div>
+        </section>
+        <section class="styles">
+            <div class="styles__container container">
+                <h1 class="styles__title title-large">ВЫБЕРИ СВОЙ СТИЛЬ</h1>
+                <div class="styles__wrapper" role="list">
+                    <div class="styles__card styles__card-first" role="listitem" tabindex="0">
+                        <div class="styles__card-text" aria-label="Мужчина в футболке свободного стиля">Свободный</div>
+                    </div>
+                    <div class="styles__card styles__card-second" role="listitem" tabindex="0">
+                        <div class="styles__card-text" aria-label="Мужчина в деловом костюме">Формальный</div>
+                    </div>
+                    <div class="styles__card styles__card-third" role="listitem" tabindex="0">
+                        <div class="styles__card-text" aria-label="Женщина в вечернем свитере">Вечерний</div>
+                    </div>
+                    <div class="styles__card styles__card-four" role="listitem" tabindex="0">
+                        <div class="styles__card-text" aria-label="Мужчина в спортивной одежде">Спорт</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="reviews">
+            <div class="reviews__container container">
+                <div class="reviews__top">
+                    <h1 class="reviews__title title-large">ЧТО О НАС ГОВОРЯТ</h1>
+                    <div class="reviews__arrows">
+                        <div class="reviews__slider-button--prev reviews__arrow">
+                            <svg class="reviews__slider-button--prev-icon" width="19" height="16">
+                                <use href="./icons/arrows-icon.svg#left"></use>
+                            </svg>
+                        </div>
+                        <div class="reviews__slider-button--next reviews__arrow">
+                            <svg class="reviews__slider-button--next-icon" width="19" height="16">
+                                <use href="./icons/arrows-icon.svg#right"></use>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper reviews__slider">
+                    <div class="swiper-wrapper reviews__slider-list">
+                        <article class="swiper-slide reviews__slide">
+                            <div class="reviews__slide-inner">
+                                <div class="reviews__slide-stars">
+                                    <svg class="rating__star-icon">
+                                        <use href="./icons/stars.svg#fullstar"></use>
+                                    </svg>
+                                    <svg class="rating__star-icon">
+                                        <use href="./icons/stars.svg#fullstar"></use>
+                                    </svg>
+                                    <svg class="rating__star-icon">
+                                        <use href="./icons/stars.svg#fullstar"></use>
+                                    </svg>
+                                    <svg class="rating__star-icon">
+                                        <use href="./icons/stars.svg#fullstar"></use>
+                                    </svg>
+                                    <svg class="rating__star-icon">
+                                        <use href="./icons/stars.svg#fullstar"></use>
+                                    </svg>
+                                </div>
+                                <div class="reviews__slide-user">
+                                    <div class="reviews__slide-user-text">Виталий У.</div>
+                                    <svg class="reviews__slide-user-icon">
+                                        <use href="./icons/checkmark-icon.svg#checkmark"></use>
+                                    </svg>
+                                </div>
+                                <div class="reviews__slide-text">«Я в восторге от качества и стиля одежды, которую
+                                    получил
+                                    от Shop.co. От повседневных вещей до элегантных платьев — каждая покупка
+                                    превзошла
+                                    мои
+                                    ожидания.»</div>
+                            </div>
+                        </article>
+                        <article class="swiper-slide reviews__slide">
+                            <div class="reviews__slide-inner">
+                                <div class="reviews__slide-stars">
+                                    <svg class="rating__star-icon">
+                                        <use href="./icons/stars.svg#fullstar"></use>
+                                    </svg>
+                                    <svg class="rating__star-icon">
+                                        <use href="./icons/stars.svg#fullstar"></use>
+                                    </svg>
+                                    <svg class="rating__star-icon">
+                                        <use href="./icons/stars.svg#fullstar"></use>
+                                    </svg>
+                                    <svg class="rating__star-icon">
+                                        <use href="./icons/stars.svg#fullstar"></use>
+                                    </svg>
+                                    <svg class="rating__star-icon">
+                                        <use href="./icons/stars.svg#fullstar"></use>
+                                    </svg>
+                                </div>
+                                <div class="reviews__slide-user">
+                                    <div class="reviews__slide-user-text">Альберт Б.</div>
+                                    <svg class="reviews__slide-user-icon">
+                                        <use href="./icons/checkmark-icon.svg#checkmark"></use>
+                                    </svg>
+                                </div>
+                                <div class="reviews__slide-text">«Я всегда ищу уникальные модные вещи и был рад
+                                    открыть
+                                    для
+                                    себя Shop.co. Их выбор одежды очень разнообразен и полностью соответствует
+                                    последним
+                                    модным трендам.»</div>
+                            </div>
+                        </article>
+                        <article class="swiper-slide reviews__slide">
+                            <div class="reviews__slide-inner">
+                                <div class="reviews__slide-stars">
+                                    <svg class="rating__star-icon">
+                                        <use href="./icons/stars.svg#fullstar"></use>
+                                    </svg>
+                                    <svg class="rating__star-icon">
+                                        <use href="./icons/stars.svg#fullstar"></use>
+                                    </svg>
+                                    <svg class="rating__star-icon">
+                                        <use href="./icons/stars.svg#fullstar"></use>
+                                    </svg>
+                                    <svg class="rating__star-icon">
+                                        <use href="./icons/stars.svg#fullstar"></use>
+                                    </svg>
+                                    <svg class="rating__star-icon">
+                                        <use href="./icons/stars.svg#fullstar"></use>
+                                    </svg>
+                                </div>
+                                <div class="reviews__slide-user">
+                                    <div class="reviews__slide-user-text">Данил В.</div>
+                                    <svg class="reviews__slide-user-icon">
+                                        <use href="./icons/checkmark-icon.svg#checkmark"></use>
+                                    </svg>
+                                </div>
+                                <div class="reviews__slide-text">«Раньше было трудно найти одежду под мой стиль,
+                                    пока я
+                                    не
+                                    открыл Shop.co. Их ассортимент впечатляет и подходит для разных вкусов и
+                                    случаев.»
+                                </div>
+                            </div>
+                        </article>
+                        <article class="swiper-slide reviews__slide">
+                            <div class="reviews__slide-inner">
+                                <div class="reviews__slide-stars">
+                                    <svg class="rating__star-icon">
+                                        <use href="./icons/stars.svg#fullstar"></use>
+                                    </svg>
+                                    <svg class="rating__star-icon">
+                                        <use href="./icons/stars.svg#fullstar"></use>
+                                    </svg>
+                                    <svg class="rating__star-icon">
+                                        <use href="./icons/stars.svg#fullstar"></use>
+                                    </svg>
+                                    <svg class="rating__star-icon">
+                                        <use href="./icons/stars.svg#fullstar"></use>
+                                    </svg>
+                                    <svg class="rating__star-icon">
+                                        <use href="./icons/stars.svg#fullstar"></use>
+                                    </svg>
+                                </div>
+                                <div class="reviews__slide-user">
+                                    <div class="reviews__slide-user-text">Sarah M.</div>
+                                    <svg class="reviews__slide-user-icon">
+                                        <use href="./icons/checkmark-icon.svg#checkmark"></use>
+                                    </svg>
+                                </div>
+                                <div class="reviews__slide-text">«Я поражён качеством и стилем одежды, которую
+                                    получил
+                                    от Shop.co. От повседневной одежды до элегантных платьев — каждая вещь, которую
+                                    я
+                                    купил, превзошла мои ожидания.»</div>
+                            </div>
+                        </article>
+                        <article class="swiper-slide reviews__slide">
+                            <div class="reviews__slide-inner">
+                                <div class="reviews__slide-stars">
+                                    <svg class="rating__star-icon">
+                                        <use href="./icons/stars.svg#fullstar"></use>
+                                    </svg>
+                                    <svg class="rating__star-icon">
+                                        <use href="./icons/stars.svg#fullstar"></use>
+                                    </svg>
+                                    <svg class="rating__star-icon">
+                                        <use href="./icons/stars.svg#fullstar"></use>
+                                    </svg>
+                                    <svg class="rating__star-icon">
+                                        <use href="./icons/stars.svg#fullstar"></use>
+                                    </svg>
+                                    <svg class="rating__star-icon">
+                                        <use href="./icons/stars.svg#fullstar"></use>
+                                    </svg>
+                                </div>
+                                <div class="reviews__slide-user">
+                                    <div class="reviews__slide-user-text">Матвей К.</div>
+                                    <svg class="reviews__slide-user-icon">
+                                        <use href="./icons/checkmark-icon.svg#checkmark"></use>
+                                    </svg>
+                                </div>
+                                <div class="reviews__slide-text">«Я всегда ищу уникальные модные вещи и рад, что
+                                    открыл
+                                    Shop.co. Их ассортимент одежды разнообразен и полностью соответствует последним
+                                    модным
+                                    тенденциям.»</div>
+                            </div>
+                        </article>
+                        <article class="swiper-slide reviews__slide">
+                            <div class="reviews__slide-inner">
+                                <div class="reviews__slide-stars">
+                                    <svg class="rating__star-icon">
+                                        <use href="./icons/stars.svg#fullstar"></use>
+                                    </svg>
+                                    <svg class="rating__star-icon">
+                                        <use href="./icons/stars.svg#fullstar"></use>
+                                    </svg>
+                                    <svg class="rating__star-icon">
+                                        <use href="./icons/stars.svg#fullstar"></use>
+                                    </svg>
+                                    <svg class="rating__star-icon">
+                                        <use href="./icons/stars.svg#fullstar"></use>
+                                    </svg>
+                                    <svg class="rating__star-icon">
+                                        <use href="./icons/stars.svg#fullstar"></use>
+                                    </svg>
+                                </div>
+                                <div class="reviews__slide-user">
+                                    <div class="reviews__slide-user-text">Данил В.</div>
+                                    <svg class="reviews__slide-user-icon">
+                                        <use href="./icons/checkmark-icon.svg#checkmark"></use>
+                                    </svg>
+                                </div>
+                                <div class="reviews__slide-text">«Раньше было трудно найти одежду под мой стиль,
+                                    пока я
+                                    не
+                                    открыл Shop.co. Их ассортимент впечатляет и подходит для разных вкусов и
+                                    случаев.»
+                                </div>
+                            </div>
+                        </article>
+                        <article class="swiper-slide reviews__slide">
+                            <div class="reviews__slide-inner">
+                                <div class="reviews__slide-stars">
+                                    <svg class="rating__star-icon">
+                                        <use href="./icons/stars.svg#fullstar"></use>
+                                    </svg>
+                                    <svg class="rating__star-icon">
+                                        <use href="./icons/stars.svg#fullstar"></use>
+                                    </svg>
+                                    <svg class="rating__star-icon">
+                                        <use href="./icons/stars.svg#fullstar"></use>
+                                    </svg>
+                                    <svg class="rating__star-icon">
+                                        <use href="./icons/stars.svg#fullstar"></use>
+                                    </svg>
+                                    <svg class="rating__star-icon">
+                                        <use href="./icons/stars.svg#fullstar"></use>
+                                    </svg>
+                                </div>
+                                <div class="reviews__slide-user">
+                                    <div class="reviews__slide-user-text">Виталий У.</div>
+                                    <svg class="reviews__slide-user-icon">
+                                        <use href="./icons/checkmark-icon.svg#checkmark"></use>
+                                    </svg>
+                                </div>
+                                <div class="reviews__slide-text">«Я в восторге от качества и стиля одежды, которую
+                                    получил
+                                    от Shop.co. От повседневных вещей до элегантных платьев — каждая покупка
+                                    превзошла
+                                    мои
+                                    ожидания.»</div>
+                            </div>
+                        </article>
+                        <article class="swiper-slide reviews__slide">
+                            <div class="reviews__slide-inner">
+                                <div class="reviews__slide-stars">
+                                    <svg class="rating__star-icon">
+                                        <use href="./icons/stars.svg#fullstar"></use>
+                                    </svg>
+                                    <svg class="rating__star-icon">
+                                        <use href="./icons/stars.svg#fullstar"></use>
+                                    </svg>
+                                    <svg class="rating__star-icon">
+                                        <use href="./icons/stars.svg#fullstar"></use>
+                                    </svg>
+                                    <svg class="rating__star-icon">
+                                        <use href="./icons/stars.svg#fullstar"></use>
+                                    </svg>
+                                    <svg class="rating__star-icon">
+                                        <use href="./icons/stars.svg#fullstar"></use>
+                                    </svg>
+                                </div>
+                                <div class="reviews__slide-user">
+                                    <div class="reviews__slide-user-text">Альберт Б.</div>
+                                    <svg class="reviews__slide-user-icon">
+                                        <use href="./icons/checkmark-icon.svg#checkmark"></use>
+                                    </svg>
+                                </div>
+                                <div class="reviews__slide-text">«Я всегда ищу уникальные модные вещи и был рад
+                                    открыть
+                                    для
+                                    себя Shop.co. Их выбор одежды очень разнообразен и полностью соответствует
+                                    последним
+                                    модным трендам.»</div>
+                            </div>
+                        </article>
+                        <article class="swiper-slide reviews__slide">
+                            <div class="reviews__slide-inner">
+                                <div class="reviews__slide-stars">
+                                    <svg class="rating__star-icon">
+                                        <use href="./icons/stars.svg#fullstar"></use>
+                                    </svg>
+                                    <svg class="rating__star-icon">
+                                        <use href="./icons/stars.svg#fullstar"></use>
+                                    </svg>
+                                    <svg class="rating__star-icon">
+                                        <use href="./icons/stars.svg#fullstar"></use>
+                                    </svg>
+                                    <svg class="rating__star-icon">
+                                        <use href="./icons/stars.svg#fullstar"></use>
+                                    </svg>
+                                    <svg class="rating__star-icon">
+                                        <use href="./icons/stars.svg#fullstar"></use>
+                                    </svg>
+                                </div>
+                                <div class="reviews__slide-user">
+                                    <div class="reviews__slide-user-text">Данил В.</div>
+                                    <svg class="reviews__slide-user-icon">
+                                        <use href="./icons/checkmark-icon.svg#checkmark"></use>
+                                    </svg>
+                                </div>
+                                <div class="reviews__slide-text">«Раньше было трудно найти одежду под мой стиль,
+                                    пока я
+                                    не
+                                    открыл Shop.co. Их ассортимент впечатляет и подходит для разных вкусов и
+                                    случаев.»
+                                </div>
+                            </div>
+                        </article>
+                        <article class="swiper-slide reviews__slide">
+                            <div class="reviews__slide-inner">
+                                <div class="reviews__slide-stars">
+                                    <svg class="rating__star-icon">
+                                        <use href="./icons/stars.svg#fullstar"></use>
+                                    </svg>
+                                    <svg class="rating__star-icon">
+                                        <use href="./icons/stars.svg#fullstar"></use>
+                                    </svg>
+                                    <svg class="rating__star-icon">
+                                        <use href="./icons/stars.svg#fullstar"></use>
+                                    </svg>
+                                    <svg class="rating__star-icon">
+                                        <use href="./icons/stars.svg#fullstar"></use>
+                                    </svg>
+                                    <svg class="rating__star-icon">
+                                        <use href="./icons/stars.svg#fullstar"></use>
+                                    </svg>
+                                </div>
+                                <div class="reviews__slide-user">
+                                    <div class="reviews__slide-user-text">Sarah M.</div>
+                                    <svg class="reviews__slide-user-icon">
+                                        <use href="./icons/checkmark-icon.svg#checkmark"></use>
+                                    </svg>
+                                </div>
+                                <div class="reviews__slide-text">«Я поражён качеством и стилем одежды, которую
+                                    получил
+                                    от Shop.co. От повседневной одежды до элегантных платьев — каждая вещь, которую
+                                    я
+                                    купил, превзошла мои ожидания.»</div>
+                            </div>
+                        </article>
+                        <article class="swiper-slide reviews__slide">
+                            <div class="reviews__slide-inner">
+                                <div class="reviews__slide-stars">
+                                    <svg class="rating__star-icon">
+                                        <use href="./icons/stars.svg#fullstar"></use>
+                                    </svg>
+                                    <svg class="rating__star-icon">
+                                        <use href="./icons/stars.svg#fullstar"></use>
+                                    </svg>
+                                    <svg class="rating__star-icon">
+                                        <use href="./icons/stars.svg#fullstar"></use>
+                                    </svg>
+                                    <svg class="rating__star-icon">
+                                        <use href="./icons/stars.svg#fullstar"></use>
+                                    </svg>
+                                    <svg class="rating__star-icon">
+                                        <use href="./icons/stars.svg#fullstar"></use>
+                                    </svg>
+                                </div>
+                                <div class="reviews__slide-user">
+                                    <div class="reviews__slide-user-text">Матвей К.</div>
+                                    <svg class="reviews__slide-user-icon">
+                                        <use href="./icons/checkmark-icon.svg#checkmark"></use>
+                                    </svg>
+                                </div>
+                                <div class="reviews__slide-text">«Я всегда ищу уникальные модные вещи и рад, что
+                                    открыл
+                                    Shop.co. Их ассортимент одежды разнообразен и полностью соответствует последним
+                                    модным
+                                    тенденциям.»</div>
+                            </div>
+                        </article>
+                        <article class="swiper-slide reviews__slide">
+                            <div class="reviews__slide-inner">
+                                <div class="reviews__slide-stars">
+                                    <svg class="rating__star-icon">
+                                        <use href="./icons/stars.svg#fullstar"></use>
+                                    </svg>
+                                    <svg class="rating__star-icon">
+                                        <use href="./icons/stars.svg#fullstar"></use>
+                                    </svg>
+                                    <svg class="rating__star-icon">
+                                        <use href="./icons/stars.svg#fullstar"></use>
+                                    </svg>
+                                    <svg class="rating__star-icon">
+                                        <use href="./icons/stars.svg#fullstar"></use>
+                                    </svg>
+                                    <svg class="rating__star-icon">
+                                        <use href="./icons/stars.svg#fullstar"></use>
+                                    </svg>
+                                </div>
+                                <div class="reviews__slide-user">
+                                    <div class="reviews__slide-user-text">Данил В.</div>
+                                    <svg class="reviews__slide-user-icon">
+                                        <use href="./icons/checkmark-icon.svg#checkmark"></use>
+                                    </svg>
+                                </div>
+                                <div class="reviews__slide-text">«Раньше было трудно найти одежду под мой стиль,
+                                    пока я
+                                    не
+                                    открыл Shop.co. Их ассортимент впечатляет и подходит для разных вкусов и
+                                    случаев.»
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+        </section>
+    </main>
+    <aside class="e-mail-blast">
+        <div class="e-mail-blast__container container">
+            <h1 class="e-mail-blast__title">БУДЬТЕ В КУРСЕ ВСЕХ ПОСЛЕДНИХ НОВОСТЕЙ</h1>
+            <form class="e-mail-blast__form">
+                <label for="email" class="e-mail-blast__label">
+                    <div class="e-mail-blast__search">
+                        <svg class="e-mail-blast__label-icon" aria-hidden="true" width="17" height="13"
+                            aria-hidden="true">
+                            <use href="./icons/email-icon.svg"></use>
+                        </svg>
+                        <input id="email" class="e-mail-blast__input" type="email" placeholder="Ваша почта" name="email"
+                            required>
+                    </div>
+                    <button type="submit" class="e-mail-blast__button">Подписаться на рассылку</button>
+                </label>
+            </form>
+        </div>
+    </aside>
+    <footer class="footer">
+        <div class="footer__container container">
+            <div class="footer__top">
+                <div class="footer__info">
+                    <a href="#" class="logo footer__info-logo" aria-label="Логотип компании">SHOP.CO</a>
+                    <div class="footer__info-text">У нас есть одежда, что подходит вашему стилю и которой можно
+                        гордиться. Для женщин и мужчин.</div>
+                    <div class="footer__info-social-network" aria-label="Ссылки на социальные сети">
+                        <a href="#" class="footer__info-social-network-link">
+                            <img src="./icons/footer__network-icons/network__icon-1.svg" loading="lazy" alt="Twitter">
+                        </a>
+                        <a href="#" class="footer__info-social-network-link">
+                            <img src="./icons/footer__network-icons/network__icon-2.svg" loading="lazy" alt="Facebook">
+                        </a>
+                        <a href="#" class="footer__info-social-network-link">
+                            <img src="./icons/footer__network-icons/network__icon-3.svg" loading="lazy" alt="Instagtam">
+                        </a>
+                        <a href="#" class="footer__info-social-network-link">
+                            <img src="./icons/footer__network-icons/network__icon-4.svg" loading="lazy" alt="GitHub">
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__menu" aria-label="Меню навигации подвала">
+                    <div class="footer__menu-bloc">
+                        <div class="footer__menu-title">Компания</div>
+                        <ul class="footer__menu-list">
+                            <li class="footer__menu-item">О нас</li>
+                            <li class="footer__menu-item">Функции</li>
+                            <li class="footer__menu-item">Работа</li>
+                            <li class="footer__menu-item">Карьера</li>
+                        </ul>
+                    </div>
+                    <div class="footer__menu-bloc">
+                        <div class="footer__menu-title">Помощь</div>
+                        <ul class="footer__menu-list">
+                            <li class="footer__menu-item">Поддержка</li>
+                            <li class="footer__menu-item">Доставка</li>
+                            <li class="footer__menu-item">Условия</li>
+                            <li class="footer__menu-item">Политика</li>
+                        </ul>
+                    </div>
+                    <div class="footer__menu-bloc">
+                        <div class="footer__menu-title">Вопросы</div>
+                        <ul class="footer__menu-list">
+                            <li class="footer__menu-item">Аккаунт</li>
+                            <li class="footer__menu-item">О доставке</li>
+                            <li class="footer__menu-item">Заказы</li>
+                            <li class="footer__menu-item">Платежи</li>
+                        </ul>
+                    </div>
+                    <div class="footer__menu-bloc">
+                        <div class="footer__menu-title">Ресурсы</div>
+                        <ul class="footer__menu-list">
+                            <li class="footer__menu-item">Бесплатные книги</li>
+                            <li class="footer__menu-item">Урок</li>
+                            <li class="footer__menu-item">Блок</li>
+                            <li class="footer__menu-item">Плейлист на YouTube</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="scrollbar-track" aria-hidden="true"></div>
+            <div class="footer__bottom">
+                <div class="footer__bottom-text">Shop.co © 2000-2023, Все права защищены</div>
+                <div class="footer__bottom-card" aria-label="Принимаемые способы оплаты">
+                    <img src="./icons/footer__card-icons/card__icon-1.svg" width="46" height="30" loading="lazy"
+                        alt="Visa">
+                    <img src="./icons/footer__card-icons/card__icon-2.svg" width="46" height="30" loading="lazy"
+                        alt="Mastercard">
+                    <img src="./icons/footer__card-icons/card__icon-3.svg" width="46" height="30" loading="lazy"
+                        alt="PayPal">
+                    <img src="./icons/footer__card-icons/card__icon-4.svg" width="46" height="30" loading="lazy"
+                        alt="ApplePay">
+                    <img src="./icons/footer__card-icons/card__icon-5.svg" width="46" height="30" loading="lazy"
+                        alt="GooglePay">
+                </div>
             </div>
         </div>
-        
-    </section>
+    </footer>
 </body>
 
 </html>

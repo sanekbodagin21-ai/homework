@@ -1,16 +1,19 @@
 :root {
     /* font-family */
     --first-family: "Satoshi", sans-serif;
-    --second-family: "Fontspring-demo", sans-serif;
+    --second-family: "GolosText", sans-serif;
     --third-family: "Integral-CF", sans-serif;
 
     /* color */
     --main-color: #000;
     --secondary-color: #fff;
-    --accent-color: #F0F0F0; 
-    --accent-color-shadow: #a8a8a8;
-    --secondary-transparent-color: #0000004d;
-    --main-transparent-color: #00000099;
+    --first-accent-color: #00000099;
+    --second-accent-color: #00000066;
+    --background-color: #f0f0f0;
+    --background-color-shadow: #a8a8a8; 
+    --separator-color: #0000001a;
+    --discounts-color: #f33;
+    --discounts-background-color: #ff33331a;
 
     /* transition */
     --transitions-time: 0.2s;

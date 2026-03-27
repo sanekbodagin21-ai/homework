@@ -1,4 +1,5 @@
 import BurgerMenu from "./burger.js";
+import {sizesSlider} from "./sizes-slider.js";
 
 try {
     new BurgerMenu(
@@ -17,6 +18,8 @@ try {
             BREAKPOINT: 768,
         },
     );
+
+    sizesSlider ();
 } catch (error) {
     console.error(error);
 }
