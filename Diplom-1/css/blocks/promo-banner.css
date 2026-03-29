@@ -1,0 +1,83 @@
+    .promo-banner {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        position: fixed;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        width: 100%;
+        background-color: var(--main-color);
+        top: 0;
+        z-index: var(--layer-3);
+        -webkit-transition: opacity var(--transitions-time), -webkit-transform var(--transitions-time);
+        transition: opacity var(--transitions-time), -webkit-transform var(--transitions-time);
+        -o-transition: transform var(--transitions-time), opacity var(--transitions-time);
+        transition: transform var(--transitions-time), opacity var(--transitions-time);
+        transition: transform var(--transitions-time), opacity var(--transitions-time), -webkit-transform var(--transitions-time);
+    }
+
+    .promo-banner--hidden {
+        -webkit-transform: translateY(-100%);
+            -ms-transform: translateY(-100%);
+                transform: translateY(-100%);
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    @media (width > 768px) {
+        .promo-banner {
+            height: 38px;
+        }
+    }
+
+    @media (width <=768px) {
+        .promo-banner {
+            height: 34px;
+        }
+    }
+
+    .promo-banner__text {
+        font-size: 14px;
+        color: var(--secondary-color);
+    }
+
+    @media (width <=768px) {
+        .promo-banner__text {
+            display: none;
+        }
+    }
+
+    .promo-banner__link {
+        color: var(--secondary-color);
+        font-weight: 500;
+        text-decoration: underline;
+        -webkit-text-decoration-skip-ink: none;
+                text-decoration-skip-ink: none;
+        padding-left: 3px;
+    }
+
+    .promo-banner__close {
+        position: absolute;
+    }
+
+    @media (width > 1220px) {
+        .promo-banner__close {
+            right: 6%;
+        }
+    }
+
+    @media (width <=1220px) {
+        .promo-banner__close {
+            right: 3%;
+        }
+    }
+
+    @media (width <=768px) {
+        .promo-banner__close {
+            right: 4%;
+        }
+    }
