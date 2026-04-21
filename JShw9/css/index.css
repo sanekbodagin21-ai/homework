@@ -1,0 +1,5 @@
+/* baze */
+@import "./baze/vars.css";
+@import "./baze/fonts.css";
+/* blocks */
+@import "./blocks/main.css";
