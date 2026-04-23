@@ -1,0 +1,15 @@
+:root {
+	/* color */
+	--background-color: #120F0D;
+	--card-background: #3d191b;
+	--main-text-color: #726e6c;
+	--additional-text-color: #110c09;
+	--accent-color: #7c7367;
+	--border-color: #b39f85;
+
+	/* border-radius */
+	--border-radius: 0.5rem;
+
+	/* font-family */
+	--font-family: "GolosText", sans-serif;
+}
