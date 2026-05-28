@@ -1,0 +1,31 @@
+:root {
+    /* font-family */
+    --first-family: "Satoshi", sans-serif;
+    --second-family: "GolosText", sans-serif;
+    --third-family: "Integral-CF", sans-serif;
+
+    /* color */
+    --main-color: #000;
+    --secondary-color: #fff;
+    --first-accent-color: #00000099;
+    --second-accent-color: #00000066;
+    --background-color: #f0f0f0;
+    --background-color-shadow: #a8a8a8;
+    --separator-color: #0000001a;
+    --discounts-color: #f33;
+    --discounts-background-color: #ff33331a;
+    --link-accent-color: #a52a2a;
+
+    /* transition */
+    --transitions-time: 0.3s;
+
+    /* shadows */
+    --shadow-glow: 0 0 6px 2px var(--first-accent-color);
+    --shadow-light-glow: 0 0 6px 2px var(--background-color-shadow);
+
+    /* z-index */
+    --layer-0: 0;
+    --layer-1: 1;
+    --layer-2: 2;
+    --layer-3: 3;
+}

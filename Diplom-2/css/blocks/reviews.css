@@ -1,0 +1,193 @@
+.reviews__container {
+    padding-top: 80px;
+    padding-bottom: 170px;
+}
+
+.reviews__top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-inline: clamp(16px,
+            calc(16px + (100 - 16) * ((100vw - 768px) / (1440 - 768))),
+            100px);
+    padding-bottom: 40px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+
+.reviews__slider .swiper-slide {
+    -webkit-transition: -webkit-filter 0.3s ease;
+    transition: -webkit-filter 0.3s ease;
+    -o-transition: filter 0.3s ease;
+    transition: filter 0.3s ease;
+    transition: filter 0.3s ease, -webkit-filter 0.3s ease;
+    -webkit-filter: blur(4px);
+            filter: blur(4px);
+}
+
+.reviews__slider .swiper-slide-active {
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    opacity: 1;
+}
+
+@media (width > 1220px) {
+    .reviews__slider .swiper-slide-active,
+    .reviews__slider .swiper-slide-next,
+    .reviews__slider .swiper-slide-prev {
+        -webkit-filter: blur(0);
+                filter: blur(0);
+    }
+}
+
+
+@media (width > 768px) {
+    .reviews__slider .swiper-wrapper {
+        margin-left: -30px;
+        width: 300px;
+    }
+}
+
+@media (width <= 768px) {
+    .swiper-slide-active {
+        /* Viewport: min390px max768px */
+        padding-inline: clamp(0px, -11.865rem + 48.68vw, 184px);
+    }
+}
+@media (width <= 576px) {
+    .swiper-slide-active {
+        /* Viewport: min390px max576px */
+        padding-inline: clamp(16px, -11.188rem + 50vw, 109px);
+    }
+}
+
+.reviews__arrows {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 16px;
+    height: 24px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.reviews__slider-button--prev,
+.reviews__slider-button--next {
+-webkit-transition: color var(--transitions-time);
+-o-transition: color var(--transitions-time);
+transition: color var(--transitions-time);
+}
+
+@media (any-hover: hover) {
+.reviews__slider-button--prev:hover,
+.reviews__slider-button--next:hover {
+    color: var(--link-accent-color);
+}
+}
+
+
+.reviews__slide-inner {
+    border: 1px solid #0000001a;
+    border-radius: 20px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+@media (width > 576px) {
+    .reviews__slide-inner {
+        padding: 28px 32px;
+        width: 400px;
+        height: 240px;
+    }
+}
+
+@media (width <=576px) {
+    .reviews__slide-inner {
+        padding: 24px;
+        width: 358px;
+        height: 186px;
+    }
+}
+
+
+.reviews__slide-user-text {
+    font-weight: 700;
+    color: var(--main-color);
+}
+
+@media (width > 576px) {
+    .reviews__slide-user-text {
+        font-size: 20px;
+        line-height: 110%;
+    }
+}
+
+@media (width <=576px) {
+    .reviews__slide-user-text {
+        font-size: 16px;
+        line-height: 138%;
+    }
+}
+
+.reviews__slide-user {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 4px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+@media (width > 576px) {
+    .reviews__slide-user {
+        padding-top: 15px;
+    }
+}
+
+@media (width <=576px) {
+    .reviews__slide-user {
+        padding-top: 15px;
+    }
+}
+
+@media (width > 576px) {
+    .reviews__slide-user-icon {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (width <=576px) {
+    .reviews__slide-user-icon {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+.reviews__slide-text {
+    font-weight: 400;
+    color: var(--first-accent-color);
+}
+
+@media (width > 576px) {
+    .reviews__slide-text {
+        padding-top: 12px;
+        font-size: 16px;
+        line-height: 138%;
+    }
+}
+
+@media (width <=576px) {
+    .reviews__slide-text {
+        padding-top: 8px;
+        font-size: 14px;
+        line-height: 143%;
+    }
+}

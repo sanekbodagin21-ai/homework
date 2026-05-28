@@ -1,0 +1,111 @@
+
+
+@media (width > 576px) {
+    .modal__buy{
+        width: min(800px, 80%);
+}
+}
+
+.modal-buy__content {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.modal__buy-title {
+    color: var(--secondary-color);
+}
+
+@media (width > 576px) {
+    .modal__buy-title {
+        margin-bottom: 50px;
+    }
+}
+@media (width <= 576px) {
+    .modal__buy-title {
+        margin-bottom: 20px;
+    }
+}
+
+.modal__buy-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+
+.modal__buy-label {
+    margin-bottom: 15px;
+}
+
+.modal__buy-input {
+    display: inline-block;
+    width: 100%;
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+    border: 1px solid var(--link-accent-color);
+}
+
+@media (width > 576px) {
+    .modal__buy-input {
+        padding: 18px 26px;
+        font-size: 16px;
+    }
+}
+
+@media (width <= 576px) {
+    .modal__buy-input {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}
+
+.modal__buy-input::-webkit-input-placeholder {
+    color: var(--background-color-shadow);
+    font-family: var(--second-family);
+    text-transform: uppercase;
+}
+
+.modal__buy-input::-moz-placeholder {
+    color: var(--background-color-shadow);
+    font-family: var(--second-family);
+    text-transform: uppercase;
+}
+
+.modal__buy-input:-ms-input-placeholder {
+    color: var(--background-color-shadow);
+    font-family: var(--second-family);
+    text-transform: uppercase;
+}
+
+.modal__buy-input::-ms-input-placeholder {
+    color: var(--background-color-shadow);
+    font-family: var(--second-family);
+    text-transform: uppercase;
+}
+
+.modal__buy-input::placeholder {
+    color: var(--background-color-shadow);
+    font-family: var(--second-family);
+    text-transform: uppercase;
+}
+
+.modal__buy-submit {
+    background-color: var(--link-accent-color);
+    color: var(--secondary-color);
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 15px;
+}
+
+@media (width > 576px) {
+    .modal__buy-submit {
+        padding: 18px 26px;
+        margin-top: 10px;
+        font-size: 20px;
+    }
+}
